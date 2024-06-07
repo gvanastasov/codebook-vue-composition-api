@@ -1,6 +1,6 @@
 # example-vue-composition-api
 
-This template should help get you started developing with Vue 3 in Vite.
+Just another demo example application(s) showing vue3 composition api capabilities. Run separate applications (intentionally, to have clean entry scope) by passing chapter as argument and load up different use cases, features and etc. provided by the api. Have fun experimenting and trying things out.
 
 ## Recommended IDE Setup
 
@@ -23,23 +23,12 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
+# change the chapter with the id of the folder containing the app.
+npm run dev --chapter=02
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
 npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
