@@ -39,3 +39,4 @@ npm run test:unit
 2.  [Reactive State](./src/chapter_02/components/Counter.vue)
 3.  [Templating](./src/chapter_03/components/Counter.vue)
 4.  [Templating: Attributes](./src/chapter_04/App.vue)
+5.  [Templating: Directives](./src/chapter_05/App.vue)
