@@ -15,6 +15,12 @@
       Boolean attributes can be bound to reactive values using the v-bind directive.
     -->
     <button :disabled="size != 6">Dummy button, enabled on size 6 above</button>
+
+    <!-- 
+      We can also bind dynamic arguments to the v-bind directive.
+      The argument is evaluated as JavaScript and the result is assigned to the attribute.
+    -->
+    <div :[dynamicAttribute]="'something'">Dynamic</div>
   </div>
 </template>
 
@@ -32,6 +38,11 @@ setInterval(() => {
   size.value %= 7
   size.value = size.value === 0 ? 1 : size.value
 }, 1000)
+
+const dynamicAttribute = ref('id')
+setInterval(() => {
+  dynamicAttribute.value = dynamicAttribute.value === 'id' ? 'class' : 'id'
+}, 5000)
 </script>
 
 <style scoped>
