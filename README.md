@@ -35,6 +35,7 @@ npm run test:unit
 
 ## Chapters
 
-01. [Hello World](./src/chapter_01/main.ts)
-02. [Reactive State](./src/chapter_02/components/Counter.vue)
-03. [Templating](./src/chapter_03/components/Counter.vue)
+1.  [Hello World](./src/chapter_01/main.ts)
+2.  [Reactive State](./src/chapter_02/components/Counter.vue)
+3.  [Templating](./src/chapter_03/components/Counter.vue)
+4.  [Templating: Attributes](./src/chapter_04/App.vue)
