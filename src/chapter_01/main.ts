@@ -1,10 +1,19 @@
 import { createApp } from 'vue'
 
-// Main app component
+/**
+ * Main entry point of the application or usually
+ * reffered to as root component.
+ */
 import App from './App.vue'
 
-// Create the app
+/**
+ * Creating the app instance.
+ */
 const app = createApp(App)
 
-// Mount the app
+/**
+ * Mounting the application to DOM element via selector.
+ * This will trigger the lifecycle hooks of the application
+ * and render the application to the DOM.
+ */
 app.mount('#app')
