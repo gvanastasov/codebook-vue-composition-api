@@ -1,5 +1,13 @@
+<!-- 
+    Its 'template' section is transpiled during build time to a render function.
+    The render function will be used to render the component in the DOM.
+-->
 <template>
   <div class="container">
+    <!-- 
+      This will render a child component inside the scope of this, aka 
+      call its render function. 
+    -->
     <HelloWorld/>
   </div>
 </template>
