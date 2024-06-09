@@ -4,6 +4,16 @@
       Directives are special attributes with the v- prefix that are used to
       manipulate the DOM. They are reactive and can be used to bind data to
       the DOM, conditionally render elements, and more.
+
+      Directives can be used in the form of:
+
+        v-name:argument.modifier="value"
+
+      The argument is optional and can be used to pass additional information to
+      the directive. The modifier is also optional and can be used to change the
+      behavior of the directive.
+
+      There are a number of built-in directives, and custom directives can be created.
     -->
 
     <!-- 
@@ -59,6 +69,13 @@
       The v-on directive is used to bind an event listener to an element.
     -->
     <button v-on:click="() => console.log('clicked')">Click me</button>
+
+    <!--
+      Modifiers can be used to change the behavior of directives.
+      The .prevent modifier is used to prevent the default behavior of an event.
+      There is a number of build-in modifiers, and custom modifiers can be created.
+    -->
+    <button v-on:click.prevent="() => console.log('clicked')">Click me</button>
   </div>
 </template>
 
