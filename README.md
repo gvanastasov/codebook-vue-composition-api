@@ -43,5 +43,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 8.  [Component: Lifecycle](./src/chapter_08/App.vue)
 9.  [Component: Computed Properties](./src/chapter_10/App.vue)
 10. [Component: Watchers](./src/chapter_10/App.vue)
+11. [Component: DOM references](./src/chapter_11/App.vue)
 
 ... more to come
