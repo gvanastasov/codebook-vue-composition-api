@@ -24,4 +24,5 @@ npm run dev --chapter=02
 5.  [Templating: Directives](./src/chapter_05/App.vue)
 6.  [Templating: Class & Style](./src/chapter_06/App.vue)
 7.  [Templating: Model binding](./src/chapter_07/App.vue)
-8.  [Properties: Computed](./src/chapter_06/App.vue)
+8.  [Component: Lifecycle](./src/chapter_08/App.vue)
+9.  [Properties: Computed](./src/chapter_10/App.vue)
