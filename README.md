@@ -41,8 +41,9 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 6.  [Templating: Model binding](./src/chapter_07/App.vue)
 7.  [Component: State](./src/chapter_02/App.vue)
 8.  [Component: Lifecycle](./src/chapter_08/App.vue)
-9.  [Component: Computed Properties](./src/chapter_10/App.vue)
+9.  [Component: Computed Properties](./src/chapter_09/App.vue)
 10. [Component: Watchers](./src/chapter_10/App.vue)
 11. [Component: DOM references](./src/chapter_11/App.vue)
+12. [Component: Encapuslate, Reuse, Scale](./src/chapter_12/App.vue)
 
 ... more to come
