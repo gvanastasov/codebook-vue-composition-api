@@ -1,58 +1,46 @@
 <template>
   <div class="container">
-    <div>value: {{ state.value }}</div>
-
-    <!-- 
-      Sometimes having logic inside the template is not nice,
-      so we can use the setup syntax to separate the logic 
-      from the template. One way to achieve this is by using
-      computed properties to calculate values based on the
-      reactive state.
-    -->
-    <div>doubled: {{ double }}</div>
-    <div>type: {{ isOdd ? 'Odd' : 'Even' }}</div>
     <div>
-      <button @click="state.value += 1">Increment</button>
-      <button @click="state.value -= 1">Decrement</button>
+      <!-- 
+        (v-bind:) class and style are special types of attribute
+        bindings in Vue. They can accept an object, where the keys
+        are the CSS property names and the values are the CSS
+        property values when styling, or the actual class names
+        when applying classes.
+        
+        the syntax for classes is:
+          - :class="{ 'class-name': condition, etc... }"
+          - :class="[ 'class-name', 'class-name-2', etc... ]"
+          - :class="classObject" (where classObject is a computed property)
+
+        the syntax for styles is:
+          - :style="{ 'property-name': value, etc... }"
+          - :style="[ { 'property-name': value }, { 'property-name-2': value-2 }, etc... ]"
+          - :style="styleObject" (where styleObject is a computed property)
+      -->
+      <button
+        v-for="n in 3"
+        :key="n"
+        :class="{ active: n === state.activeIndex }"
+        :style="{ color: n === state.activeIndex ? 'white' : 'black' }"
+        @click="setActive(n)"
+      >
+        {{ n === state.activeIndex ? 'Active' : 'Inactive' }}
+      </button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, computed } from 'vue'
+import { reactive } from 'vue'
 
 const state = reactive({
-  value: 0
+  activeIndex: 0
 })
 
-/**
- * Computed properties are reactive and will update
- * whenever the reactive state changes (that is all
- * the properties that are used inside the computed
- * function, which are also reactive).
- *
- * In this case, the `double` computed property will
- * update whenever the `state.value` changes.
- *
- */
-const double = computed(() => state.value * 2)
-const isOdd = computed(() => state.value % 2 === 1)
-
-/**
- * We can also create computed properties that have
- * a setter function. This is useful when we want to
- * update the reactive state based on the computed
- * property. This is called writable computed properties.
- */
-const random = computed({
-  get() {
-    return state.value * Math.random()
-  },
-  set(value) {
-    state.value = value
-  }
-})
-console.log('random', random)
+function setActive(index: number) {
+  state.activeIndex = index
+}
 </script>
 
 <style scoped>
@@ -65,5 +53,9 @@ console.log('random', random)
   font-weight: bold;
   color: #333;
   flex-direction: column;
+}
+
+.active {
+  background-color: #919191;
 }
 </style>
