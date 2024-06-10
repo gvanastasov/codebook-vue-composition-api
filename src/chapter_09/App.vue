@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>Computed Properties</h1>
     <div>value: {{ state.value }}</div>
 
     <!-- 
