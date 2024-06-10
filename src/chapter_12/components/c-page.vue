@@ -1,3 +1,8 @@
+<!-- 
+  A component that represents a page with a title and content.
+  (in case my application ends up having many of those... which
+  most applications does)
+-->
 <template>
   <c-container>
     <c-heading level="1" :text="props.title" />
