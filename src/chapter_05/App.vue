@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>Class and Style binding</h1>
     <div>
       <!-- 
         (v-bind:) class and style are special types of attribute

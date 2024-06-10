@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>Directives</h1>
     <!-- 
       Directives are special attributes with the v- prefix that are used to
       manipulate the DOM. They are reactive and can be used to bind data to

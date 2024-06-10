@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>THE FORM</h1>
+    <h1>Model binding</h1>
     <form>
       <!-- 
         Some behaviours require two-way data binding, which is

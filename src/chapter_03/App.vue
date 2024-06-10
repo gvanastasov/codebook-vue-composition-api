@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>Attributes</h1>
     <!-- 
       Attributes can be bound to reactive values using the v-bind directive.
       The directive can be shortened to a colon (:) followed by the attribute name.
