@@ -1,21 +1,37 @@
 # example-vue-composition-api
 
-Crash course with demo example application(s) showing vue3 and its composition api capabilities. Learn from reading and running code. Try out separate applications (intentionally, to have clean application scope) by passing chapter as argument and load up different use cases, features and etc. provided by the api. Have fun experimenting, learning and trying things out.
+This is a crash course designed to showcase Vue 3's Composition API capabilities through demo example applications. By reading and running the code, you'll gain hands-on experience with different use cases and features provided by the Composition API. Each chapter focuses on a specific aspect, allowing you to learn in a clean and isolated application scope.
+
+The repository contains a series of small applications, each demonstrating different features and best practices of Vue 3's Composition API. Feel free to explore each chapter, experiment, and learn at your own pace. Have fun experimenting, learning, and trying things out!
 
 ## Project Setup
+
+First, clone the repository and navigate into the project directory:
+
+```sh
+git clone https://github.com/gvanastasov/example-vue-composition-api.git
+cd example-vue-composition-api
+```
+
+Install the dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Running
+
+To compile and hot-reload for development, use the following command:
 
 ```sh
-# change the chapter with the id of the folder containing the app.
 npm run dev --chapter=02
 ```
 
+> Replace 02 with the desired chapter number to load a different example.
+
 ## Chapters
+
+Each chapter focuses on a distinct feature of Vue 3's Composition API, building up from basic to more advanced topics. Click on the chapter links to explore the code and understand how each concept is implemented.
 
 1.  [Hello World](./src/chapter_01/main.ts)
 2.  [Reactive State](./src/chapter_02/components/Counter.vue)
@@ -26,3 +42,5 @@ npm run dev --chapter=02
 7.  [Templating: Model binding](./src/chapter_07/App.vue)
 8.  [Component: Lifecycle](./src/chapter_08/App.vue)
 9.  [Properties: Computed](./src/chapter_10/App.vue)
+
+... more to come
