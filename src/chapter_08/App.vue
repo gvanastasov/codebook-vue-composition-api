@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>THE LIFECYCLE HOOKS</h1>
+    <h1>Lifecycle</h1>
     <div>
       <ul>
         <li v-for="(hook, idx) in state.hooks" :key="idx + 1">{{ idx + 1 }}. {{ hook }}</li>

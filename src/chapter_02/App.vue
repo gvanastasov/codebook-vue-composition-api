@@ -1,54 +1,29 @@
 <template>
   <div class="container">
-    <h1>Counter</h1>
-    <p>read some code for now...</p>
+    <h1>Templating</h1>
+    <!-- 
+        Text interpolation is done via double curly braces (also known as moustaches).
+        The value inside the moustaches is evaluated as JavaScript and the result is
+        rendered in the DOM.
+        The value is reactive, meaning it will update when the value changes.
+        The value can be a variable, a function, or an expression.
+        Since this is used inside a redner function, it must have a reference to the
+        object that holds the value (aka if 'state' as reactive reference does not 
+        exist on the component internal state, this will throw an exception).
+
+        The v-html directive is used to render HTML content inside the DOM.
+    -->
+    <div><span v-html="state.title"></span> : {{ state.value }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
-/**
- * The main purposes of components is reusability, modularity, and
- * encapsulation. They are the building blocks of Vue applications.
- *
- * Part of components is the data they hold, or in other words the state
- * of the component. This state can be reactive, meaning it will trigger
- * a re-render of the component when it changes.
- *
- * In Vue 3, you can use the `reactive` function to create a reactive object.
- *
- *  - reactive can be used for objects and arrays.
- */
 import { reactive } from 'vue'
 
 const state = reactive({
-  value: 0
+  value: 0,
+  title: '<bold>Count</bold>'
 })
-
-console.log('Counter value: ', state.value)
-
-/**
- * Changes to the state object will trigger a re-render of the component.
- */
-setInterval(() => {
-  state.value++
-}, 1000)
-
-/**
- * Another way to create reactive state is by using the `ref` function.
- * This function creates a reactive object that holds a single value.
- *
- *  - ref can be used for primitive values, objects, and arrays.
- */
-import { ref } from 'vue'
-
-const title = ref('Count')
-
-/**
- * Changes to the ref object will trigger a re-render of the component.
- */
-title.value += 'er'
-
-console.log('Counter title: ', title.value)
 </script>
 
 <style scoped>

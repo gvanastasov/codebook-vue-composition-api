@@ -34,12 +34,12 @@ npm run dev --chapter=02
 Each chapter focuses on a distinct feature of Vue 3's Composition API, building up from basic to more advanced topics. Click on the chapter links to explore the code and understand how each concept is implemented.
 
 1.  [Hello World](./src/chapter_01/main.ts)
-2.  [Reactivity](./src/chapter_02/components/Counter.vue)
-3.  [Templating](./src/chapter_03/components/Counter.vue)
-4.  [Templating: Attributes](./src/chapter_04/App.vue)
-5.  [Templating: Directives](./src/chapter_05/App.vue)
-6.  [Templating: Class & Style](./src/chapter_06/App.vue)
-7.  [Templating: Model binding](./src/chapter_07/App.vue)
+2.  [Templating](./src/chapter_03/App.vue)
+3.  [Templating: Attributes](./src/chapter_04/App.vue)
+4.  [Templating: Directives](./src/chapter_05/App.vue)
+5.  [Templating: Class & Style](./src/chapter_06/App.vue)
+6.  [Templating: Model binding](./src/chapter_07/App.vue)
+7.  [Component: State](./src/chapter_02/App.vue)
 8.  [Component: Lifecycle](./src/chapter_08/App.vue)
 9.  [Properties: Computed](./src/chapter_10/App.vue)
 

@@ -1,33 +1,37 @@
 <template>
   <div class="container">
-    <div>
+    <h1>THE FORM</h1>
+    <form>
       <!-- 
-        (v-bind:) class and style are special types of attribute
-        bindings in Vue. They can accept an object, where the keys
-        are the CSS property names and the values are the CSS
-        property values when styling, or the actual class names
-        when applying classes.
-        
-        the syntax for classes is:
-          - :class="{ 'class-name': condition, etc... }"
-          - :class="[ 'class-name', 'class-name-2', etc... ]"
-          - :class="classObject" (where classObject is a computed property)
+        Some behaviours require two-way data binding, which is
+        passing data from the template to the script and vice versa.
+        In this case we use the value from state.name to populate the
+        input field, and we use the @input event to update the value
+        of state.name when the user types in the input field (back and 
+        forth, or two-way data binding)
 
-        the syntax for styles is:
-          - :style="{ 'property-name': value, etc... }"
-          - :style="[ { 'property-name': value }, { 'property-name-2': value-2 }, etc... ]"
-          - :style="styleObject" (where styleObject is a computed property)
+        The syntax for two-way data binding is:
+          - :value="getData..."
+          - @input="(event: Event) => setData..."
+
+        This is a common pattern especially when working with forms.
       -->
-      <button
-        v-for="n in 3"
-        :key="n"
-        :class="{ active: n === state.activeIndex }"
-        :style="{ color: n === state.activeIndex ? 'white' : 'black' }"
-        @click="setActive(n)"
-      >
-        {{ n === state.activeIndex ? 'Active' : 'Inactive' }}
-      </button>
-    </div>
+      <input
+        type="text"
+        placeholder="Enter your name"
+        :value="state.name"
+        @input="(event: Event) => (state.name = (event.target as HTMLInputElement)?.value || '')"
+      />
+      <br />
+      <!-- 
+        To simplify the work, Vue provides the v-model (special) directive 
+        which automatically binds the value of an input field to a data 
+        property in the script.
+      -->
+      <input type="password" placeholder="Enter your password" v-model="state.password" />
+      <br />
+      <button>Submit</button>
+    </form>
   </div>
 </template>
 
@@ -35,12 +39,9 @@
 import { reactive } from 'vue'
 
 const state = reactive({
-  activeIndex: 0
+  name: '',
+  password: ''
 })
-
-function setActive(index: number) {
-  state.activeIndex = index
-}
 </script>
 
 <style scoped>

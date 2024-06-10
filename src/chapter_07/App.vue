@@ -1,47 +1,54 @@
 <template>
   <div class="container">
-    <h1>THE FORM</h1>
-    <form>
-      <!-- 
-        Some behaviours require two-way data binding, which is
-        passing data from the template to the script and vice versa.
-        In this case we use the value from state.name to populate the
-        input field, and we use the @input event to update the value
-        of state.name when the user types in the input field (back and 
-        forth, or two-way data binding)
-
-        The syntax for two-way data binding is:
-          - :value="getData..."
-          - @input="(event: Event) => setData..."
-
-        This is a common pattern especially when working with forms.
-      -->
-      <input
-        type="text"
-        placeholder="Enter your name"
-        :value="state.name"
-        @input="(event: Event) => (state.name = (event.target as HTMLInputElement)?.value || '')"
-      />
-      <br />
-      <!-- 
-        To simplify the work, Vue provides the v-model (special) directive 
-        which automatically binds the value of an input field to a data 
-        property in the script.
-      -->
-      <input type="password" placeholder="Enter your password" v-model="state.password" />
-      <br />
-      <button>Submit</button>
-    </form>
+    <h1>State</h1>
+    <div>{{ title }} : {{ state.value }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
+/**
+ * The main purposes of components is reusability, modularity, and
+ * encapsulation. They are the building blocks of Vue applications.
+ *
+ * Part of components is the data they hold, or in other words the state
+ * of the component. This state can be reactive, meaning it will trigger
+ * a re-render of the component when it changes.
+ *
+ * In Vue 3, you can use the `reactive` function to create a reactive object.
+ *
+ *  - reactive can be used for objects and arrays.
+ */
 import { reactive } from 'vue'
 
 const state = reactive({
-  name: '',
-  password: ''
+  value: 0
 })
+
+console.log('Counter value: ', state.value)
+
+/**
+ * Changes to the state object will trigger a re-render of the component.
+ */
+setInterval(() => {
+  state.value++
+}, 1000)
+
+/**
+ * Another way to create reactive state is by using the `ref` function.
+ * This function creates a reactive object that holds a single value.
+ *
+ *  - ref can be used for primitive values, objects, and arrays.
+ */
+import { ref } from 'vue'
+
+const title = ref('Count')
+
+/**
+ * Changes to the ref object will trigger a re-render of the component.
+ */
+title.value += 'er'
+
+console.log('Counter title: ', title.value)
 </script>
 
 <style scoped>
@@ -53,10 +60,5 @@ const state = reactive({
   font-size: 2rem;
   font-weight: bold;
   color: #333;
-  flex-direction: column;
-}
-
-.active {
-  background-color: #919191;
 }
 </style>

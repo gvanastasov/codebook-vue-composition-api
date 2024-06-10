@@ -1,29 +1,48 @@
 <template>
   <div class="container">
-    <h1>Templating</h1>
     <!-- 
-        Text interpolation is done via double curly braces (also known as moustaches).
-        The value inside the moustaches is evaluated as JavaScript and the result is
-        rendered in the DOM.
-        The value is reactive, meaning it will update when the value changes.
-        The value can be a variable, a function, or an expression.
-        Since this is used inside a redner function, it must have a reference to the
-        object that holds the value (aka if 'state' as reactive reference does not 
-        exist on the component internal state, this will throw an exception).
-
-        The v-html directive is used to render HTML content inside the DOM.
+      Attributes can be bound to reactive values using the v-bind directive.
+      The directive can be shortened to a colon (:) followed by the attribute name.
+      The value of the attribute is evaluated as JavaScript and the result is
+      assigned to the attribute.
+      
+      The value is reactive, meaning it will update when the value changes.
+      The value can be a variable, a function, or an expression.
     -->
-    <div><span v-html="state.title"></span> : {{ state.value }}</div>
+    <div :id="'size_' + size">Size</div>
+
+    <!-- 
+      Boolean attributes can be bound to reactive values using the v-bind directive.
+    -->
+    <button :disabled="size != 6">Dummy button, enabled on size 6 above</button>
+
+    <!-- 
+      We can also bind dynamic arguments to the v-bind directive.
+      The argument is evaluated as JavaScript and the result is assigned to the attribute.
+    -->
+    <div :[dynamicAttribute]="'something'">Dynamic</div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { ref } from 'vue'
 
-const state = reactive({
-  value: 0,
-  title: '<bold>Count</bold>'
-})
+const size = ref(1)
+
+/**
+ * Rotate the size value from 1 to 6 and back to 1 every second
+ * and use it to change the font size of the text via the id attribute.
+ */
+setInterval(() => {
+  size.value += 1
+  size.value %= 7
+  size.value = size.value === 0 ? 1 : size.value
+}, 1000)
+
+const dynamicAttribute = ref('id')
+setInterval(() => {
+  dynamicAttribute.value = dynamicAttribute.value === 'id' ? 'class' : 'id'
+}, 5000)
 </script>
 
 <style scoped>
@@ -35,5 +54,30 @@ const state = reactive({
   font-size: 2rem;
   font-weight: bold;
   color: #333;
+  flex-direction: column;
+}
+
+#size_1 {
+  font-size: 1rem;
+}
+
+#size_2 {
+  font-size: 2rem;
+}
+
+#size_3 {
+  font-size: 3rem;
+}
+
+#size_4 {
+  font-size: 4rem;
+}
+
+#size_5 {
+  font-size: 5rem;
+}
+
+#size_6 {
+  font-size: 6rem;
 }
 </style>
