@@ -22,3 +22,4 @@ npm run dev --chapter=02
 3.  [Templating](./src/chapter_03/components/Counter.vue)
 4.  [Templating: Attributes](./src/chapter_04/App.vue)
 5.  [Templating: Directives](./src/chapter_05/App.vue)
+6.  [Properties: Computed](./src/chapter_06/App.vue)
