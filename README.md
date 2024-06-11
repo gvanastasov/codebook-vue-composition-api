@@ -46,5 +46,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 11. [Component: DOM references](./src/chapter_11/App.vue)
 12. [Component: Encapuslate, Reuse, Scale](./src/chapter_12/App.vue)
 13. [Component: Registration](./src/chapter_13/App.vue)
+14. [Component: Properties](./src/chapter_14/App.vue)
 
 ... more to come
