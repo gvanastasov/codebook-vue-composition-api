@@ -36,6 +36,13 @@
         :style="{ display: 'inline' }"
       ></c-child>
     </div>
+
+    <!-- 
+      We can also pass an object to a prop. This is useful when we want to
+      pass multiple values to a prop. We can also use the v-bind directive
+      to pass the object.
+    -->
+    <c-child v-bind="{ message: 'Inline', anotherMessage: 'Inline' }"></c-child>
   </div>
 </template>
 
