@@ -49,5 +49,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 14. [Properties](./src/chapter_14/App.vue)
 15. [Events](./src/chapter_15/App.vue)
 16. [Attribute Inheritance](./src/chapter_16/App.vue)
+17. [Multi-root components](./src/chapter_17/App.vue)
 
 ... more to come
