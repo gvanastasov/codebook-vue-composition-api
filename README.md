@@ -51,5 +51,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 16. [Attribute Inheritance](./src/chapter_16/App.vue)
 17. [Multi-root components](./src/chapter_17/App.vue)
 18. [Slots](./src/chapter_18/App.vue)
+19. [Provide & Inject](./src/chapter_19/App.vue)
 
 ... more to come
