@@ -52,5 +52,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 17. [Multi-root components](./src/chapter_17/App.vue)
 18. [Slots](./src/chapter_18/App.vue)
 19. [Provide & Inject](./src/chapter_19/App.vue)
+20. [Async components](./src/chapter_20/App.vue)
 
 ... more to come
