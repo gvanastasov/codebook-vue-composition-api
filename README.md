@@ -58,5 +58,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 23. [Dynamic components](./src/chapter_23/App.vue)
 24. [Transition](./src/chapter_24/App.vue)
 25. [Cached components](./src/chapter_25/App.vue)
+26. [Teleport](./src/chapter_26/App.vue)
 
 ... more to come
