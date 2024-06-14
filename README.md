@@ -60,5 +60,6 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 25. [Cached components](./src/chapter_25/App.vue)
 26. [Teleport](./src/chapter_26/App.vue)
 27. [Routing](./src/chapter_27/router.ts)
+28. [State management](./src/chapter_28/state/counter.ts)
 
 ... more to come
