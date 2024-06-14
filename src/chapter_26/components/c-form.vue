@@ -5,6 +5,9 @@
       the modal-wrapper, but it's rendered inside it. This is useful when you want to render a
       component in a different part of the DOM without changing its parent-child relationship,
       as well as retain access to the component's state this markup originated from.
+
+      We also might want to hide some of the implementation details, like target for the teleport
+      and etc. to a seprate component, so we can reuse it in multiple places.
     -->
     <Teleport to="#modal-wrapper > div" v-if="showForm">
       <div>
