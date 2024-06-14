@@ -55,6 +55,7 @@ Each chapter focuses on a distinct feature of Vue 3's Composition API, building 
 20. [Async components](./src/chapter_20/App.vue)
 21. [Composables](./src/chapter_21/App.vue)
 22. [Plugins](./src/chapter_22/App.vue)
-23. [Dynamic components](./src/)
+23. [Dynamic components](./src/chapter_23/App.vue)
+24. [Transition](./src/chapter_24/App.vue)
 
 ... more to come
